@@ -1,43 +1,40 @@
 package test;
 
-import java.util.Objects;
-
 /**
  * @author zhangyan
  * @version $ Id: User.java, v 0.1 2021/3/9 12:50 zhangyan Exp $
  */
 public class User {
 
-    private String name;
+    private java.lang.String name;
 
-    private Integer age;
+    private java.lang.Integer age;
 
-    public String getName() {
+    public java.lang.String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(java.lang.String name) {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public java.lang.Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(java.lang.Integer age) {
         this.age = age;
     }
 
-    @Override
-    public boolean equals(Object o) {
+    @java.lang.Override
+    public boolean equals(java.lang.Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(name, user.name) &&
-                Objects.equals(age, user.age);
+        return name.equals(((User) o).getName()) && age == ((User) o).getAge();
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
         return age;
     }
